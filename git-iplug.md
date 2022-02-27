@@ -201,3 +201,190 @@ git config --global user.email "mail@example.com"
 
 
 
+### Using Git
+
+
+
+#### Standard Commands
+
+
+
+- To **initialize a folder**:
+
+  ```sh
+  git init
+  ```
+
+  This can be done in any folder. Either empty or something which already has some work.
+
+- We can **view the difference** from the latest commit and our current work with
+
+  ```sh
+  git diff
+  ```
+
+  This will show additions with a green highlighting, deletions with a red highlighting. Press `q` to exit the diff screen.
+
+- We can now do our work. Every time we have done some little thing and we wish to save it with Git, we **add the files to the staging area**
+
+  - ```sh
+    git add filenames
+    ```
+
+  - To add the entire current folder to the staging area, we can simply do
+
+    ```sh
+    git add .
+    ```
+
+    The `.` is a shorthand for the current directory. [Similarly, `..` is a shorthand for parent directory.]
+
+  
+
+- We can **view the current status** of our files with
+
+  ```sh
+  git status
+  ```
+
+  This shows the files which are currently untracked or staged.
+  
+
+- To **commit the changes**:
+
+  ```sh
+  git commit -m "Message describing changes or why the changes happened"
+  ```
+
+
+
+- The work has been saved by Git. We can **view the log of all our commits** as:
+
+  ```sh
+  git log
+  ```
+
+  Press `q` to exit the log screen.
+
+
+
+We can repeat the steps as required. Here's the previous image shown again.
+
+
+
+![](https://geo-python.github.io/site/_images/Git_illustration.png)
+
+
+
+Image Source: [Git Basics, Geo Python, University of Helsinki](https://geo-python.github.io/site/lessons/L2/git-basics.html)
+
+
+
+
+
+- To **discard any changes in the working directory** and restore a file as to how it was in the last commit, we do
+
+  ```sh
+  git restore filenames
+  ```
+
+
+
+- To **remove a file from the staging area** (for example, if you added some file by mistake)
+
+  ```sh
+  git restore --staged filenames
+  ```
+
+
+
+#### Using a Remote
+
+
+
+As mentioned previously, we can have our Git repo hosted somewhere online as well. GitHub is the most popular service for this, and is used by many developers and hobbyists alike.
+
+
+
+**Remote** simply means our repo is hosted somewhere else too. Same sense as working *remotely.*
+
+
+
+Git assigns a simple **nickname** to every remote. The default nickname used by most is `origin`.
+
+
+
+>  **NOTE:** You need to authorize git to use your GitHub account with SSH. Refer to all the steps in [Connecting to SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) Docs on GitHub and add an SSH key to your account before proceeding.
+
+
+
+##### Creating a new remote repo
+
+
+
+- Go to GitHub, create a new repository. For example, suppose my username is `iplug-iiserp` and I create a repository named `hello-world`.
+
+- GitHub will show the URL to use automatically after the creation. Here, in our example, it would be `https://github.com/iplug-iiserp/hello-world.git`.
+
+- To add this as our remote for our local repo, we can do:
+
+  ```sh
+  git remote add origin https://github.com/iplug-iiserp/hello-git.git
+  ```
+
+  As you can notice, the command adds the URL as a remote with the nickname `origin`. You can use a different nickname if you like, though.
+
+
+
+- To **push our local repo** to the remote:
+
+  ```sh
+  git push origin master
+  ```
+
+  If the default branch name is `main`, replace `master` with `main`. 
+
+
+
+- Similarly, we can **pull data from the remote to our local repo**:
+
+  ``` sh
+  git pull origin master
+  ```
+
+  As always, make sure to check the default branch name. Replace `master` with `main` if that is your default.
+
+
+
+##### Using an existing remote repo
+
+
+
+There are loads of repositories publicly available on GitHub. Here's one for example: [iplug-iiserp/aug-2021](https://github.com/iplug-iiserp/aug-2021), an online dashboard for the August 2021 Semester.
+
+
+
+![](https://i.imgur.com/qgfVl0f.png)
+
+
+
+Click on the `Code` button and you should see a URL. Copy that.
+
+
+
+We will **clone** this repository to our local machine. Here in this case, it would be:
+
+
+
+```sh
+git clone https://github.com/iplug-iiserp/aug-2021.git
+```
+
+
+
+> **NOTE:** If you simply wish to clone a repository and not push any changes to it, you don't need the SSH authentication step.
+
+
+
+We often clone repositories to just use or test out the software/work or see it.
+
