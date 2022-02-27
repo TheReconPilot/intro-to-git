@@ -56,6 +56,10 @@ GitHub is not the only service which hosts Git Repositories. Some names include
 
 
 
+---
+
+
+
 ## Git Basics
 
 
@@ -131,6 +135,13 @@ Image Source: [Git Branches, Noble Desktop](https://www.nobledesktop.com/learn/g
 
 
 
+
+
+
+---
+
+
+
 ### Setting up Git
 
 
@@ -198,6 +209,10 @@ git config --global user.email "mail@example.com"
 ```
 
 
+
+
+
+---
 
 
 
@@ -388,3 +403,98 @@ git clone https://github.com/iplug-iiserp/aug-2021.git
 
 We often clone repositories to just use or test out the software/work or see it.
 
+
+
+##### The Power of GitHub - Collaboration
+
+
+
+Here's how a typical group work on a codebase looks:
+
+
+
+- There is a remote repository hosted on GitHub.
+- Everyone has a local copy.
+- Everyone works on their own stuff on the respective branches.
+  - For example, someone could be working on a `new-feature` or `development` branch, or whatever they have named it.
+  - They commit their work as and when needed.
+- Everyone pushes their work to the remote repository.
+- When someone is done with their work, they open a **Pull Request** (PR) on GitHub. (This is specific to GitHub). The branch is merged after a code review by the head maintainers of the repository.
+- If there are any conflicts (like multiple people made changes to the same code lines), then the *merge conflict* needs to be manually sorted out. Someone has to go to each conflict and select which change to keep and which to reject. After all conflicts are resolved, the branches can be merged.
+- Git creates a special commit signifying merging of branches.
+
+
+
+GitHub and Git allow many people to work on the same thing simultaneously, and each small change is saved to a commit message. This greatly reduces the pain of debugging and reverting any changes if needed.
+
+
+
+---
+
+
+
+## Resources
+
+
+
+### Starting with Git
+
+
+
+- **git - the simple guide** by Roger Dudler
+  https://rogerdudler.github.io/git-guide/
+
+  
+
+- **Git How To** - a guided tour that walks you through the fundamentals of git.
+  https://githowto.com/
+
+  
+
+- **Meet Git** - A simple introduction to Git in the Geo Python course offered by the University of Helsinki
+  https://geo-python.github.io/site/lessons/L2/git-basics.html
+
+  
+
+- **Introduction to GitHub** - An interactive class by GitHub
+  https://lab.github.com/githubtraining/introduction-to-github
+
+
+
+### Going Deeper
+
+
+
+- **Git Branches** - A simple page by Atlassian explaining the concept of Branching
+  https://www.atlassian.com/git/tutorials/using-branches
+
+- **The Pro Git Book** - The book by Git, serves as both an introduction and a deep dive
+  https://git-scm.com/book/en/v2
+
+  
+
+- **Visualize Git with D3** - An interactive site which helps you visualize how different git commands may look and how they affect the tree
+  https://onlywei.github.io/explain-git-with-d3/
+
+  
+
+- **Git Explorer** - Find the right commands you need without digging through the web
+  https://gitexplorer.com/
+
+
+
+Also recommend is looking up GitHub specific things like **Pull Requests**, **Commit Signatures**, **GitHub PR Review**, **GitHub Pages** and anything you may come across and find interesting.
+
+
+
+### When Things go Wrong
+
+
+
+- **Oh Shit, Git!?!** - Some situations you may get yourself into, and how to resolve them
+  https://ohshitgit.com/
+
+  
+
+- **Git Flight Rules** - Some solutions on what to do when something happens
+  https://github.com/k88hudson/git-flight-rules
