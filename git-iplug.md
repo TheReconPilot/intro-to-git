@@ -47,6 +47,15 @@ The primary benefit is that it makes **collaboration** easier and much more feas
 
 
 
+GitHub is not the only service which hosts Git Repositories. Some names include
+
+- [GitHub](https://github.com/) (from GitHub Inc, purchased by Microsoft)
+- [GitLab](https://about.gitlab.com/) (from GitLab Inc)
+- [Bitbucket](https://bitbucket.org/) (from Atlassian)
+- [Gitee](https://gitee.com/) (from Open Source China)
+
+
+
 ## Git Basics
 
 
