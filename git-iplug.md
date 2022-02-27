@@ -129,3 +129,75 @@ Image Source: [Using Git Branches, Atlassian](https://www.atlassian.com/git/tuto
 
 Image Source: [Git Branches, Noble Desktop](https://www.nobledesktop.com/learn/git/git-branches)
 
+
+
+### Setting up Git
+
+
+
+#### Downloading Git
+
+
+
+Git usually comes installed by default on Linux and Mac systems.
+
+
+
+For Windows, 
+
+
+
+- [Optional but nice] [Download Windows Terminal](https://www.microsoft.com/store/productId/9N0DX20HK701).
+  - If the link doesn't work, go to Microsoft Store and search for *Windows Terminal*.
+
+- [Download Notepad++](https://notepad-plus-plus.org/downloads/) and install it. It is a powerful and fast text editor with many more features than the standard Notepad.
+- [Download Git](https://git-scm.com/downloads).
+  - When it asks about the **default editor**, select Notepad++. This will help a lot.
+  - For the rest, follow the default options and continue the installation.
+
+
+
+##### Checking that git is installed
+
+
+
+Open a terminal and run:
+
+
+
+```sh
+git --version
+```
+
+
+
+It should show something like `git version 2.35.0.windows.1` on Windows, and `git version 2.25.1` on Linux systems. Of course, the exact version number may differ.
+
+
+
+The point is, if it works and gives an output and not an error, git is working.
+
+
+
+#### Initial Configuration
+
+
+
+Git associates a username and email address to each commit. We need to set it up before working with Git.
+
+
+
+```sh
+git config --global user.name "MyName"
+```
+
+
+
+```sh
+git config --global user.email "mail@example.com"
+```
+
+
+
+
+
