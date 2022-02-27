@@ -483,7 +483,7 @@ GitHub and Git allow many people to work on the same thing simultaneously, and e
 
 
 
-Also recommend is looking up GitHub specific things like **Pull Requests**, **Commit Signatures**, **GitHub PR Review**, **GitHub Pages** and anything you may come across and find interesting.
+Also recommend is looking up GitHub specific things like **Forking a Repository**, **Pull Requests**, **Commit Signatures**, **GitHub PR Review**, **GitHub Pages** and anything you may come across and find interesting.
 
 
 
