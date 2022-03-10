@@ -72,7 +72,7 @@ GitHub is not the only service which hosts Git Repositories. Some names include
   - The working directory is our live working folder, just a simple folder in the normal sense.
   - The repository is where git stores snapshots of the work.
   - In practice, we call the folder both a repo and a working directory.
-    
+  
 - Whenever we do some little work that we feel should be saved, we **add the file(s) to the staging area** and **commit** with a helpful message.
   
 - Git stores a snapshot of the folder with the commit message and a unique id (an SHA256 hash).
@@ -90,7 +90,7 @@ Image Source: [Git Basics, Geo Python, University of Helsinki](https://geo-pytho
 - We can also have our work sync with some remote repository or backup. That could be present on any services like GitHub, GitLab, etc. 
   - We can **push** any changes on our local repo to the remote repo.
   - We can **pull** any changes from the remote repo to our local repo.
-    
+  
 - We can **revert** any changes at a later time.
   
 
@@ -109,7 +109,6 @@ Image Source: [Git Basics, Geo Python, University of Helsinki](https://geo-pytho
 
 
 - The snapshots and commits are stored in a Graph Tree like structure. The main tree is simply called **main** or **master** branch.
-  
   
 - We can also work on different things using the feature of **branches**. Essentially, we work on something alongside the main/master branch and we can merge changes to the main/master branch later on.
 
@@ -264,7 +263,6 @@ git config --global user.email "mail@example.com"
 
   This shows the files which are currently untracked or staged.
   
-
 - To **commit the changes**:
 
   ```sh
@@ -310,6 +308,46 @@ Image Source: [Git Basics, Geo Python, University of Helsinki](https://geo-pytho
   ```sh
   git restore --staged filenames
   ```
+
+
+
+#### Ignoring Files with `.gitignore`
+
+
+
+There may be situations where we do not want Git to track certain files. For example, it could be a dataset, or compilation artifacts, or the `.ipynb_checkpoints` if you use Jupyter Notebooks often, or anything else.
+
+
+
+To specify which files git should ignore, we create a `.gitignore` file in our repository. Here, we can mention which files and folders are to be ignored. We can use wildcards like `*`, which matches all filenames.
+
+
+
+An example `.gitignore` file could look something like:
+
+
+
+```
+# Ignore all compiled files
+*.pyc
+*.class
+
+# Ignore checkpoints folder
+.ipynb_checkpoints/
+
+# Hidden System Files/Folders on Mac
+.DS_Store/
+
+# VSCode folder
+.vscode/
+
+# Specific test dataset
+datafolder/test-data.csv
+```
+
+
+
+Atlassian has a [good tutorial](https://www.atlassian.com/git/tutorials/saving-changes/gitignore) on `.gitignore`.
 
 
 
@@ -458,6 +496,9 @@ GitHub and Git allow many people to work on the same thing simultaneously, and e
 
 - **Introduction to GitHub** - An interactive class by GitHub
   https://lab.github.com/githubtraining/introduction-to-github
+  
+- **.gitignore** - About `.gitignore` by Atlassian
+  https://www.atlassian.com/git/tutorials/saving-changes/gitignore
 
 
 
@@ -467,7 +508,8 @@ GitHub and Git allow many people to work on the same thing simultaneously, and e
 
 - **Git Branches** - A simple page by Atlassian explaining the concept of Branching
   https://www.atlassian.com/git/tutorials/using-branches
-
+  
+  
 - **The Pro Git Book** - The book by Git, serves as both an introduction and a deep dive
   https://git-scm.com/book/en/v2
 
